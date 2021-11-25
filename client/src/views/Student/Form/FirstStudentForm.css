@@ -1,0 +1,18 @@
+@font-face {
+    font-family: Gilroy-Light ;
+    src: url(../../../assets/Font/Gilroy-Light.otf);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+  }
+  .do{
+    background-color: #ffcc02;
+    padding: 2% 5%;
+  }
+  .advice{
+    margin: 5% 10%;
+  }

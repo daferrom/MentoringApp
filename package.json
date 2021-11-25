@@ -1,7 +1,7 @@
 {
-  "name": "agora",
+  "name": "mentoring-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app to manage the Mentoring process",
   "main": "index.js",
   "workspaces": [
     "api",
@@ -26,9 +26,9 @@
   },
   "devDependencies": {
     "eslint-plugin-cypress": "2.11.2",
-    "standard": "16.0.3"
+    "standard": "^16.0.4"
   },
   "keywords": [],
-  "author": "",
+  "author": "The Best Team",
   "license": "ISC"
 }

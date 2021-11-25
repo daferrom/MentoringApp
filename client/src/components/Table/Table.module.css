@@ -1,0 +1,35 @@
+
+.Crud{
+    background-color: #D7D7D7;
+    
+   
+}
+table tr:nth-child(even){
+  background-color: #FEFEFE;
+  
+}
+
+
+table{
+ 
+ text-align:center;
+  border-collapse: collapse;
+
+}
+@media (min-width: 780px ) {
+    
+  tbody tr:hover{
+    background-color: #92C149;
+  }
+  
+ table,table thead,table tbody{
+   width: 100%;
+   
+ }
+
+ 
+  
+}
+
+
+

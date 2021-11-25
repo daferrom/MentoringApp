@@ -1,0 +1,71 @@
+.Container{
+    width: 100vw;
+    height: 70vh;
+    margin: 0em 0rem 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    
+    
+    
+}
+.Container h1{
+   text-align: center;
+    color: #92C149;
+    font-family: Gilroy-ExtraBold;
+    font-size:1.5rem;
+}
+
+.Container input{
+    width:65vw;
+    height:5vh;
+    border: #010101 solid 0.12rem;
+    border-radius: 1rem;
+}
+.Container button {
+    width:50%;
+    background-color: #FFCC02;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    
+}
+
+.Container button:hover{
+    background-color:#92C149 ;
+}
+@media (min-width: 350px ) {
+    
+    .container h1{
+       font-size:90%;
+    }
+    .Container input{
+        width:60vw;
+        height: 6vh;
+        
+    }
+    
+ }
+@media (min-width: 780px ) {
+    .Container{
+        height: 40vh;
+    }
+    
+    .Container input{
+        width:50vw;
+        
+    }
+    .Container button {
+        width:30%;
+        
+        
+    }
+
+    .ontainer{
+      height: 50vh;
+    }
+    
+    
+ }
+

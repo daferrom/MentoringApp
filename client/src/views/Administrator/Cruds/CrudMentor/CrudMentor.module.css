@@ -1,0 +1,78 @@
+
+.container{
+    font-family:Gilroy-Light; 
+}
+.row td{
+    width: 100vw;
+    height: 7vh;
+   
+}
+.column th{
+    width: 100vw;
+    height: 8vh;
+    background-color:#FFCC02;
+    color: #010101;
+    
+
+}
+td button{
+    width: 50vw;
+    background-color: #FFCC02;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    max-width:200px;
+    
+    
+}
+.column th,.row td{ 
+    height:auto;
+   font-size: 5vw;
+   display: inline-block;
+   margin: auto;
+
+}
+
+@media (min-width: 480px ) {
+    td button{
+        width: 40%;
+        
+     }
+     .column th,.row td{ 
+        font-size: 4vw;
+    }
+}
+@media (min-width: 780px ) {
+    
+    .column ,.row  { 
+       
+        display: flex;
+        flex-direction:row;
+    }
+    tr th{
+        padding: 5rem;
+    }
+    .column th,.row td{
+        width:100%;
+        font-size: 1.5vw;
+       
+      
+    }
+    td button{
+       width: 55%;
+       height: 95%;
+    }
+    .row td ,.column th{
+    padding:0.2rem;
+      margin: auto;
+    }
+    .column{
+        padding: 0.9rem;
+        background-color:#FFCC02 ;
+        margin: auto;
+    }
+    .row{
+        padding: 1rem;
+        margin: auto;
+    }
+    
+ }
