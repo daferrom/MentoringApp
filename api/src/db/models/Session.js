@@ -23,11 +23,11 @@ const sessionSchema = new Schema({
   },
   // the startDate key stores the start date of the session
   startDate: {
-    type: Date
+    type: String
   },
   // the endDate key stores the end date of the session
   endDate: {
-    type: Date
+    type: String
   },
   // the file key stores the files of the session
   file: {

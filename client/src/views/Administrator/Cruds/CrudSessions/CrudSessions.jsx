@@ -117,7 +117,7 @@ const InsertData=e=>{
   console.log(SavedData)
 }
 //function that searches the database for data
-const petitionGet=async()=>{
+/*const petitionGet=async()=>{
  await axios.get(Database)
   .then(response=>{
     console.log(response.data)
@@ -131,14 +131,14 @@ useEffect(async()=>{
 
 //function that inserts data into the database
 
-const petitionPost=async()=>{
+/*const petitionPost=async()=>{
   await axios.post(Database,SavedData)
   .then(response=>{
     setData(data.concat(response.data),
     openedClosedModalInsertar()
   )
   })
-}
+}*/
 
 
 
@@ -163,7 +163,7 @@ const petitionPost=async()=>{
     <TextField name="Género" className={Styles.inputMaterial} label="Sesión N°" onChange={InsertData} value={SavedData && SavedData.Nombres}/>
     <br /><br />
     <div  className={Styles.button}>
-      <Button className={Styles.Button } onClick={()=>petitionPost()}>Insertar</Button>
+      <Button className={Styles.Button }/* onClick={()=>petitionPost()}*/>Insertar</Button>
       <Button className={Styles.Button }  onClick={()=>openedClosedModalInsertar()}>Cancelar</Button>
     </div>
   </div>

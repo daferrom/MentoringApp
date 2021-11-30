@@ -23,7 +23,7 @@ const schedulledSessionCard = ({numSession, dateAsig, id, link }) => {
                 </a>
                 <p className={styles.message}>¡ Recuerda debes diligenciar el formulario de la sesión antes de asistir a esta !</p>
                 <Link to={`/form-student/${id}`} className={styles.btn}>ver formulario </Link>
-                <p className={styles.message}>¡ Recuerda debes diligenciar el informe de la sesión desoues de asistir a esta !</p> 
+                <p className={styles.message}>¡ Recuerda debes diligenciar el informe de la sesión despues de asistir a esta !</p> 
                 <Link to={`/inform-student/${id}`} className={styles.btn}> ver informe </Link> 
                 </div>
             </>

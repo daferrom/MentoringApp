@@ -18,7 +18,7 @@ const menAvailabilitySchema = new Schema({
     ref: Session
   },
   // the mentAvailability key stores an array with the available dates that the mentor has for the session
-  mentAvailability: [Date]
+  mentAvailability: [String]
 })
 
 // fixes in menAvailabilitySchema

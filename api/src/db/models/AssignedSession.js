@@ -24,7 +24,7 @@ const assignedSessionSchema = new Schema({
   },
   // The dateAsig key stores the date assigned for the session
   dateAsig: {
-    type: Date
+    type: String
   },
   // The link key stores the link for the assigned session
   link: String

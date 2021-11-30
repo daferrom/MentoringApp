@@ -46,7 +46,6 @@ import CrudSessionsDetail from './views/Administrator/Cruds/CrudSessionDetail/Cr
 
 function App() {
 
-
   // it gives us the store's dispatch method as its result
   const dispatch = useDispatch()
   // save the token stored in the redux store

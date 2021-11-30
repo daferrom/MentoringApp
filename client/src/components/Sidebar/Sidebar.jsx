@@ -49,7 +49,7 @@ const Sidebar = () => {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <>
+    <div>
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
           <NavIcon to='#'>
@@ -67,7 +67,7 @@ const Sidebar = () => {
           </SidebarWrap>
         </SidebarNav>
       </IconContext.Provider>
-    </>
+    </div>
   );
 };
 

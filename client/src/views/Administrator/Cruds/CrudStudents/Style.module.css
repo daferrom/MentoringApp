@@ -58,12 +58,11 @@ td button{
         display: flex;
         flex-direction:row;
     }
-    tr th{
-        padding: 5rem;
-    }
+    
     .column th,.row td{
-        width:100%;
-        font-size: 1.5vw;
+        width:10vw;
+        font-size: 1.2vw;
+        overflow:auto;
        
       
     }
@@ -72,17 +71,26 @@ td button{
        height: 95%;
     }
     .row td ,.column th{
-    padding:0.2rem;
-      margin: auto;
+        
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    padding-left:0.1rem;
+    padding-right:0.1rem;
+    
+    
+
+     
     }
     .column{
         padding: 0.9rem;
         background-color:#FFCC02 ;
-        margin: auto;
+       
     }
     .row{
         padding: 1rem;
-        margin: auto;
+       
     }
+
+    
     
  }

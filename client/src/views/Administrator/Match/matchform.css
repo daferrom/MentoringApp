@@ -10,8 +10,7 @@
     width: auto;
     height: auto;
     background-color: #FFCC02;
-    padding:1.5rem 1.5rem 1.5rem 1.5rem;
-    
+    padding:1.5rem 1.5rem 1.5rem 1.5rem;  
 }
 
 .heder p{
@@ -36,9 +35,50 @@ button{
     padding: 1rem;
     font-size: 1.5vw;
 }
-
 .select{
     background-color: black;
+}
+
+.listStudent-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.listStudent-title{
+    background-color:#FFCC02;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.mg-top{
+    margin-top: 50px;
+}
+
+.margin-bottom{
+    margin-bottom: 50px;
+}
+
+.listStudent-tr{
+    background-color: #92C149;
+    margin-top: 0;
+}
+
+.listStudent-th{
+    padding: 0;
+}
+
+.listStudent-tr-map{
+    background-color:#D7D7D7;
+    /* padding: 1rem; */
+}
+
+.td-number{
+    padding: 0;
+}
+
+.td-data{
+    padding: 1rem;
 }
 
 

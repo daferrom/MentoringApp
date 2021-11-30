@@ -44,7 +44,7 @@ const SchedulledSessionCard = ({ numSession, startDate, endDate, id }) => {
         
         {sessionFilledOut ? 
         <Link to={'/student-assignment-sessions'} className={styles.btn}>
-          Sesión agendada
+          Ir a la sesión agendada
         </Link> 
         :
         <Link to={`/calendar/${id}`} className={styles.btn}>

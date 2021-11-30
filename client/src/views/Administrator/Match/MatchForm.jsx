@@ -11,6 +11,7 @@ const MatchForm = () => {
   const [students, setStudents] = useState([])
   const [mentors, setMentors] = useState([])
   const [chosenProgram, setChosenProgram] = useState(false)
+  const [done, setDone] = useState(false)
 
   const handleTypeSelect = e => {
     cohort = e.label
@@ -79,7 +80,9 @@ const MatchForm = () => {
     }
   }
 
-  const match = []
+  const [match, setMatch] = useState([])
+  
+
   let resultInterest = 0
   let resultAge = 0
   let competencies = 0
@@ -188,6 +191,7 @@ const MatchForm = () => {
     }
     console.log("El listado del Match")
     console.log(match)
+    setDone(true)
   }
     
     
@@ -196,34 +200,73 @@ const MatchForm = () => {
   const ListStudentMentor = () => {
     return(
       <div>
-          <div>
-            <h2>Lista de Estudiantes</h2>
-            {students.map(e => {
-              return (
-              <p key={e.id}>{e.user_id.name} {e.user_id.lastName}</p>   
+      <Sidebar/>
+          <div className="listStudent-Container">
+            <h2 className="listStudent-title">Lista de Estudiantes</h2>
+            <table>
+              <tr className="listStudent-tr">
+                <th className="listStudent-th"> </th>
+                <th className="listStudent-th">Nombre</th>
+                <th className="listStudent-th">Apellido</th>
+                
+              </tr>
+              
+            {students.map((e, index) => {
+              return ( 
+                <tr className="listStudent-tr-map" key={e.id}>
+                    <td className="td-number">{index + 1}</td>
+                    <td className="td-data">{e.user_id.name}</td>
+                    <td className="td-data">{e.user_id.lastName}</td>
+                </tr> 
               )
             })}
+            </table>  
           </div>
-          <div>
-            <h2>Lista de Mentores</h2>
-            {mentors.map(e => {
-              return (
-              <p key={e.id}>{e.user_id.name} {e.user_id.lastName}</p>
+          <div className="listStudent-Container">
+            <h2 className="listStudent-title mg-top">Lista de Mentores</h2>
+            <table>
+              <tr className="listStudent-tr">
+                <th className="listStudent-th"> </th>
+                <th className="listStudent-th">Nombre</th>
+                <th className="listStudent-th">Apellido</th>
+                
+              </tr>
+              
+            {mentors.map((e, index) => {
+              return ( 
+                <tr className="listStudent-tr-map" key={e.id}>
+                    <td className="td-number">{index + 1}</td>
+                    <td className="td-data">{e.user_id.name}</td>
+                    <td className="td-data">{e.user_id.lastName}</td>
+                </tr> 
               )
             })}
+            </table> 
           </div>
-          <div>
-              <h2>Lista de Match</h2>
-              {match.map(e => {
-                  return (
-                    <tr >
-                        <td>{e.nameEstudent}</td>
-                        <td>{e.nameMentor}</td>
-                    </tr>
-                  )
-                })}
+          {done && 
+          <div className="listStudent-Container margin-bottom">
+            <h2 className="listStudent-title mg-top">Macth Estudiante Mentor</h2>
+            <table>
+              <tr className="listStudent-tr">
+                <th className="listStudent-th"> </th>
+                <th className="listStudent-th">Estudiante</th>
+                <th className="listStudent-th">Mentor</th>
+                
+              </tr>
+              
+            {match.map((e, index) => {
+              return ( 
+                <tr className="listStudent-tr-map" key={e.id}>
+                    <td className="td-number">{index + 1}</td>
+                    <td className="td-data">{e.nameEstudent}</td>
+                    <td className="td-data">{e.nameMentor}</td>
+                </tr> 
+              )
+            })}
+            </table> 
           </div>
-          <button onClick={Match}>Hacer Match</button>
+          }
+          <button style={{display: done ? 'none' : 'block'}} onClick={Match}>Hacer Match</button>
           
     </div>
     )
@@ -247,7 +290,7 @@ const MatchForm = () => {
                 onChange={handleTypeSelect}
               />
 
-              <p>Elige el programa</p>
+              <p>Elige el programa.</p>
 
               <Select
                 name='programs'

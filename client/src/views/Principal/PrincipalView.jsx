@@ -64,6 +64,6 @@ const PrincipalView = () => {
       <Link to="/formControl">| formControl |</Link>
     </div>
   )
-}
+  }
 
 export default PrincipalView

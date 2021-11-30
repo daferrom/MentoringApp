@@ -40,7 +40,7 @@ const NavRes = () => {
                 <span />
             </Hamburger>
             <Menu isOpen={isOpen} isLogged={isLogged}>
-                {/* <MenuLink to="">Sesiones Asignadas</MenuLink> */}
+                <MenuLink to="/student-assignment-sessions">Sesiones Asignadas</MenuLink>
                 <MenuLink to="/student-sessions">Sesiones Habilitadas</MenuLink>
                 {/* <MenuLink to="">Formularios</MenuLink>
                 <MenuLink to="">Informes</MenuLink> */}
