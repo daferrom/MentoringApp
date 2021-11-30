@@ -239,7 +239,7 @@ getInfoStudent.get('/', async (req, res) => {
       }
     res.json(arrayInfoStudents)
   } catch (error) {
-    next(error)
+    console.log(error)
   }
 })
 

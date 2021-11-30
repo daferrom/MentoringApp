@@ -91,9 +91,8 @@ const MatchForm = () => {
     let count = 0
     // Interests the student and mentor
     for (let i = 0; i < 3; i++) {
-      // const result = students[est].interestsStudent[i].includes(mentors[m].interestsMentor)
       const result = mentors[m].interestsMentor.includes(students[est].interestsStudent[i])
-      console.log("Result: " + result)
+      // console.log("Result: " + result)
       if (result === true) {
         if (count === 0) {
           count = 5
