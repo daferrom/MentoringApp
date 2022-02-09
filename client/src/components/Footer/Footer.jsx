@@ -39,7 +39,7 @@ const Footer = () => {
        
       </section>
     </section>
-    <hr className="footer-seperator" />
+    
   </section>
   )
 }

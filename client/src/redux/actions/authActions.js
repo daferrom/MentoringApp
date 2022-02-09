@@ -1,6 +1,8 @@
 import ACTIONS from './index'
 import axios from 'axios'
 
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
+
 export const dispatchLogin = () => {
     return {
         type: ACTIONS.LOGIN
@@ -8,7 +10,7 @@ export const dispatchLogin = () => {
 }
 
 export const fetchUser = async (token) => {
-    const res = await axios.get('http://localhost:3001/api/info', {
+    const res = await axios.get(`${baseUrl}/api/info`, {
         headers: {Authorization: token}
     })
     return res

@@ -6,6 +6,8 @@ import axios from 'axios'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
+
 const MultipleChoice = () => {
   // const [value, setValue] = useState(null)
   
@@ -25,7 +27,7 @@ const MultipleChoice = () => {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:3001/api/profile-edit'
+      url: `${baseUrl}/api/profile-edit`
     })
       .then(response => {
         setData(response.data)
@@ -148,7 +150,7 @@ const MultipleChoice = () => {
       const idStudent = user.id
       // console.log(idStudent)
       axios
-      .post(`http://localhost:3001/api/studentsPerfil-control-update/${idStudent}`, { interestsStudent:userinterestsStudent})
+      .post(`${baseUrl}/api/studentsPerfil-control-update/${idStudent}`, { interestsStudent:userinterestsStudent})
       navigate('/thanks-student')
     }else{
       alert('Por favor selecciona 3 intereses')

@@ -13,6 +13,8 @@ const MatchForm = () => {
   const [chosenProgram, setChosenProgram] = useState(false)
   const [done, setDone] = useState(false)
 
+  const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
+
   const handleTypeSelect = e => {
     cohort = e.label
     console.log(cohort)
@@ -55,7 +57,7 @@ const MatchForm = () => {
 
   const getValuesFinal = async () => {
     try {
-      const res = await axios.get(`http://localhost:3001/api/match/students/${program}/${cohort}`)
+      const res = await axios.get(`${baseUrl}/api/match/students/${program}/${cohort}`)
       // console.log(res)
       console.log(cohort)
       if (res.status === 200) {
@@ -69,7 +71,7 @@ const MatchForm = () => {
 
   const getValuesMentor = async () => {
     try {
-      const resp = await axios.get(`http://localhost:3001/api/match/mentor/${program}/${cohort}`)
+      const resp = await axios.get(`${baseUrl}/api/match/mentor/${program}/${cohort}`)
       // console.log(resp)
       if (resp.status === 200) {
         setChosenProgram(true)
@@ -245,7 +247,7 @@ const MatchForm = () => {
           </div>
           {done && 
           <div className="listStudent-Container margin-bottom">
-            <h2 className="listStudent-title mg-top">Macth Estudiante Mentor</h2>
+            <h2 className="listStudent-title mg-top">Match Estudiante Mentor</h2>
             <table>
               <tr className="listStudent-tr">
                 <th className="listStudent-th"> </th>

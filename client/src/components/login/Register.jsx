@@ -14,7 +14,7 @@ const initialState = {
   success: '',
   role:''
 }
-
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
 
 function Register() {
   const [user, setUser] = useState(initialState)
@@ -52,12 +52,12 @@ function Register() {
 
       try {
           if(auth.isAdmin){
-              const res = await axios.post('http://localhost:3001/api/register_admin', {
+              const res = await axios.post(`${baseUrl}/api/register_admin`, {
                   name, email, password, role
           })
               setUser({...user, err: '', success: res.data.msg})
           } else {
-              const res = await axios.post('http://localhost:3001/api/register', {
+              const res = await axios.post(`${baseUrl}/api/register`, {
                   name, email, password
           })
               setUser({...user, err: '', success: res.data.msg})

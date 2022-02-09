@@ -9,10 +9,11 @@ const SchedulledSessionCard = ({ numSession, startDate, endDate, id }) => {
 
   const [sessionFilledOut, setSessionFilledOut] = useState(false)
   const idStudent = useSelector(state => state.auth.user.id)
+  const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
 
   useEffect(() => {
     if(idStudent){
-      axios.get(`http://localhost:3001/api/dashboard/assigned-session/${idStudent}/${id}`)
+      axios.get(`${baseUrl}/api/dashboard/assigned-session/${idStudent}/${id}`)
       .then(response => {
         // setSessions(response.data)
         if(response.data.length > 0){

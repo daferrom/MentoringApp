@@ -9,7 +9,7 @@ const PrincipalView = () => {
   const dispatch = useDispatch()
   const token = useSelector(state => state.token)
   const auth = useSelector(state => state.auth)
-
+  const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
 
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem('loggedAgoraUser')
@@ -18,9 +18,9 @@ const PrincipalView = () => {
     if (firstLogin && loggedUserJSON) {
       const user = JSON.parse(loggedUserJSON)
       const refreshtoken = user.refresh_token
-
-      const getToken = async () => {
-        const res = await axios.post('http://localhost:3001/api/refresh_token', { refreshtoken })
+      
+      const getToken = async () =>{
+        const res = await axios.post(`${baseUrl}/api/refresh_token`, {refreshtoken})
         // console.log(res)
         dispatch({ type: 'GET_TOKEN', payload: res.data.access_token })
       }

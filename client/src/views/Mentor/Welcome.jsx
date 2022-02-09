@@ -7,13 +7,15 @@ import { useNavigate } from 'react-router-dom'
 
 const Welcome= () => {
 
+  const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
+
   const [data, setData] = useState([])
 
   const idMentor = useSelector(state => state.auth.user.id)
 
   useEffect(() => {
     axios({
-      url: `http://localhost:3001/api/one/mentor/${idMentor}`
+      url: `${baseUrl}/api/one/mentor/${idMentor}`
     })
       .then(response => {
         setData(response.data)

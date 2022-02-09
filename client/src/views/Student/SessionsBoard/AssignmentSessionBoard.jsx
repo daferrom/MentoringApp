@@ -5,13 +5,14 @@ import Axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useSelector } from 'react-redux'
 
-function SessionsBoard() {
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
+function SessionsBoard () {
   const idStudent = useSelector(state => state.auth.user.id)
   const [sessions, setSessions] = useState([])
 
   useEffect(() => {
     Axios({
-      url: `http://localhost:3001/api/dashboard/all/assigned-session/${idStudent}`
+      url: `${baseUrl}/api/dashboard/all/assigned-session/${idStudent}`
     })
       .then(response => {
         setSessions(response.data)

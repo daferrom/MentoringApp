@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
+
 const Thanks = () => {
 
   const idStudent = useSelector(state => state.auth.user.id)
@@ -11,7 +13,7 @@ const Thanks = () => {
   
   useEffect(() => {
     if(idStudent){
-      axios.get(`http://localhost:3001/api/one/student/${idStudent}`)
+      axios.get(`${baseUrl}/api/one/student/${idStudent}`)
       .then(res => {
         const assignedMentor = res.data[0].assignedMentor;
         // console.log(assignedMentor)

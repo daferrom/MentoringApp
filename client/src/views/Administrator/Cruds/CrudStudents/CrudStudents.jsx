@@ -8,7 +8,6 @@ import {makeStyles} from '@material-ui/core/styles';
 import { Modal, Button,TextField} from '@material-ui/core';
 import Axios from 'axios';
 import Sidebar from '../../../../components/Sidebar/Sidebar';
-// import Sidebar from '../../../../components/Sidebar/Sidebar';
 
 const Articles=[{
    
@@ -126,7 +125,7 @@ const CrudStudents = () => {
     const petitionPost = async e => {
       e.preventDefault();
       try{
-        await Axios.post(`http://localhost:3001/api/students-control-post`,{
+        await Axios.post(`${baseUrl}/api/students-control-post`,{
           
           gender:SavedData.gender ,
           actualAge:SavedData.actualAge ,

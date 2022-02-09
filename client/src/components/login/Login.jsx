@@ -16,7 +16,7 @@ const Login = () => {
     err: '',
     success: ''
   })
-
+  const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
   // const [state, setstate] = useState(initialState)
 
   const dispatch = useDispatch()
@@ -32,7 +32,7 @@ const Login = () => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      const res = await axios.post('http://localhost:3001/api/login', {
+      const res = await axios.post(`${baseUrl}/api/login`, {
         email,
         password
       })

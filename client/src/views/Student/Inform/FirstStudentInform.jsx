@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
 const FirstStudentInform = () => {
  
 	const [list, setList] = useState([]);
@@ -23,7 +24,7 @@ const FirstStudentInform = () => {
 	useEffect(() => {
 		if(idUser){
 	  	axios({
-				url: `http://localhost:3001/api/filledOut/session-report/${idUser}/${id}`,
+				url: `${baseUrl}/api/filledOut/session-report/${idUser}/${id}`,
 	  	})
 			.then((res) => {
 		  	// setList(res.data);
@@ -39,8 +40,12 @@ const FirstStudentInform = () => {
 
 
 	useEffect(() => {
-		axios({
-			url: `http://localhost:3001/api/sessionReport/${id}`,
+	axios({
+		url: `${baseUrl}/api/sessionReport/${id}`,
+	})
+		.then((response) => {
+		setList(response.data);
+		console.log(response.data);
 		})
 			.then((response) => {
 			setList(response.data);
@@ -62,7 +67,7 @@ const FirstStudentInform = () => {
 	useEffect(() => {
 		if(idUser){
 	  	axios({
-				url: `http://localhost:3001/api/answerform/${id}/${idUser}`,
+				url: `${baseUrl}/api/answerform/${id}/${idUser}`,
 	  	})
 			.then((res) => {
 		  	// setList(response.data);
@@ -129,7 +134,7 @@ const FirstStudentInform = () => {
 					answer : answerState[answer]
 				}
 	
-					await axios.post(`http://localhost:3001/api/answerBank`,{
+					await axios.post(`${baseUrl}/api/answerBank`,{
 					idSession: finalAnswer.idSession,
 					idUser: finalAnswer.idUser,
 					idQuestion: finalAnswer.idQuestion,
@@ -137,7 +142,7 @@ const FirstStudentInform = () => {
 				})
 			}
 			try{
-				await axios.post('http://localhost:3001/api/new/sessionReport',{
+				await axios.post(`${baseUrl}/api/new/sessionReport`,{
 					idSession: id,
 					idUser: idUser,
 					filledOut: true,

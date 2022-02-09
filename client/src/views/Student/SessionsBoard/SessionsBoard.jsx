@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { useSelector } from 'react-redux'
 import WaitMessage from '../../../components/Calendar/WaitMessage';
 
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
+
 function SessionsBoard () {
   // const idStudent = useSelector(state => state.auth.user.id)
   const [sessions, setSessions] = useState([])
@@ -16,7 +18,7 @@ function SessionsBoard () {
   useEffect(
     sessionsExist => {
       //  const studentProgram = user.program
-      Axios.get(`http://localhost:3001/api/session/${studentProgram}`).then(
+      Axios.get(`${baseUrl}/api/session/${studentProgram}`).then(
         res => {
           const sessionsResult = res.data
            console.log(sessionsResult)

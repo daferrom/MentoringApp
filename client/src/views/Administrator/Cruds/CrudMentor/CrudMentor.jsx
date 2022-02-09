@@ -3,7 +3,7 @@ import styles from './CrudMentor.module.css';
 import Table from '../../../../components/Table/Table';
 import SearchContainer from '../../../../components/SearchContainer/SearchContainer';
 import {FontAwesomeIcon}from'@fortawesome/react-fontawesome';
-import {faEdit,faTrashAlt,faPlusSquare}from'@fortawesome/free-solid-svg-icons'
+import { faEdit, faTrashAlt }from'@fortawesome/free-solid-svg-icons'
 import {makeStyles} from '@material-ui/core/styles';
 import { Modal, Button,TextField} from '@material-ui/core';
 import Axios from 'axios';
@@ -13,7 +13,7 @@ import Sidebar from '../../../../components/Sidebar/Sidebar';
 
 
 
-
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
 
  //Yellow row data
  const Articles=[{
@@ -171,7 +171,7 @@ const [students, setStudents] = useState([])
 
   useEffect(() => {
     Axios({
-      url: 'http://localhost:3001/api/mentorViewStudent'
+      url: `${baseUrl}/api/mentorViewStudent`
     })
       .then(response => {
         setStudents(response.data)

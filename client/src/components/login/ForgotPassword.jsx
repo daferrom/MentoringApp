@@ -9,7 +9,7 @@ const initialState = {
   err: '',
   success: ''
 }
-
+const baseUrl = 'https://fathomless-bastion-33135.herokuapp.com'
 
 function ForgotPassword() {
   const [data, setData] = useState(initialState)
@@ -26,7 +26,7 @@ function ForgotPassword() {
           return setData({...data, err: 'Invalid emails.', success: ''})
           
       try {
-          const res = await axios.post('http://localhost:3001/api/forgot', {email})
+          const res = await axios.post(`${baseUrl}/api/forgot`, {email})
 
           return setData({...data, err: '', success: res.data.msg})
       } catch (err) {

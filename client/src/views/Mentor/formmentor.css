@@ -1,69 +1,69 @@
-.container-Q{
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  max-width:80%;
-  min-width: fit-content;
-  min-height: 400px;
-  max-height: fit-content;
-  margin-left:7%;
-  margin-right: 10%;
-  margin-top: 10%;
-  border-radius: 20px;
-  background-color:#FEFEFE;
-  display: flex;
-  padding: 2%;
- 
-  flex-wrap: wrap;
+  .container-Q{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width:80%;
+    min-width: fit-content;
+    min-height: 400px;
+    max-height: fit-content;
+    margin-left:7%;
+    margin-right: 10%;
+    margin-top: 10%;
+    border-radius: 20px;
+    background-color:#FEFEFE;
+    display: flex;
+    padding: 2%;
+   
+    flex-wrap: wrap;
+    
   
+  }
+  
+  .containerList{
+    background-color:#FEFEFE;
+    width: 40%;
+    min-width: 360px;
+    padding-left: 4%;
+    margin-bottom: 5%;
+    border-radius: 15px ;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  /*.button-formMentor{
+    font-size: 17px;
+    background-color:#FFCC02;
+    border: transparent;
+    border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }*/
 
-}
+  .form-mentor{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.containerList{
-  background-color:#FEFEFE;
-  width: 40%;
-  min-width: 360px;
-  padding-left: 4%;
-  margin-bottom: 5%;
-  border-radius: 15px ;
-  margin-right: 2%;
-  display: flex;
-  flex-direction: column;
-}
-/*.button-formMentor{
-  font-size: 17px;
-  background-color:#FFCC02;
-  border: transparent;
-  border-radius: 10px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-right: 40px;
-  padding-left: 40px;
-}*/
+  .mg-bottom{
+    margin-bottom: 10px;  
+  }
+  .button-formMentor{
+    height:40px;
+    padding: 8px 20px;
+    background: #ffcc02;
+    color: #000;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+    transition: 0.5s;
+    border: none;   
+    cursor: pointer; 
+    font-size: 22px;
+    align-items: center;
 
-.form-mentor{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mg-bottom{
-  margin-bottom: 10px;  
-}
-.button-formMentor{
-  height:40px;
-  padding: 8px 20px;
-  background: #ffcc02;
-  color: #000;
-  border-radius: 10px;
-  text-decoration: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
-  transition: 0.5s;
-  border: none;   
-  cursor: pointer; 
-  font-size: 22px;
-  align-items: center;
-
-}
+  }

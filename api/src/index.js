@@ -18,7 +18,7 @@ app.use(express.static('../client/build'))
 app.use(allRoutes)
 
 // Setting
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 'fathomless-bastion-33135.herokuapp.com'
 // defines a port and passes the value to it
 app.set('port', port)
 
