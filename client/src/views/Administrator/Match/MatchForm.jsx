@@ -260,7 +260,7 @@ const MatchForm = () => {
               return ( 
                 <tr className="listStudent-tr-map" key={e.id}>
                     <td className="td-number">{index + 1}</td>
-                    <td className="td-data">{e.nameEstudent}</td>
+                    <td className="td-data">{e.nameEstudent}{e.lastName}</td>
                     <td className="td-data">{e.nameMentor}</td>
                 </tr> 
               )

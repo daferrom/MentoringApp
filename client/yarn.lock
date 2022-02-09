@@ -3755,8 +3755,6 @@
     "whatwg-mimetype" "^2.3.0"
     "whatwg-url" "^8.0.0"
 
-"date-fns@^2.24.0":
-
 "debug@^2.2.0":
   "version" "2.6.9"
   dependencies:
