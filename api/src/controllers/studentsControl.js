@@ -77,7 +77,7 @@ postUserRouter.post('/', async (req, res) => {
   // const actualAge = (req.body.actualAge)
 
   let { name, email, password, contactNumber, role, cohorte } = req.body
-  console.log(name, email, password, contactNumber, role, cohorte)
+  // console.log(name, email, password, contactNumber, role, cohorte)
 
   if (!name || !email || !password || !role || !contactNumber || !cohorte){
     return res.status(400).json({ msg: 'Please fill in all fields.' })}

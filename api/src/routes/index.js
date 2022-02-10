@@ -38,7 +38,13 @@ const notifMentorRouter = require('../controllers/notif-mentor')
 
 const matchRouter = require('../controllers/match')
 
+// route for upload csv
+const uploadCsvRouter = require('../controllers/csvControl')
+
 const router = Router()
+
+// route for upload csv
+router.use('/api/upload', uploadCsvRouter.uploadCsv)
 
 router.use('/api/refresh_token', userRouter.getAccessToken)
 
@@ -122,7 +128,7 @@ router.use('/api/questionBank', questionBankRouter)
 router.use('/api/editMentor', UpdateMentorRouter)
 
 router.use('/api/sessionReport', SessionReportRouter.SessionReportRouter)
-module.exports = router
+// module.exports = router
 router.use('/api/dashboard/infoStudent', dashBoardRouter.infoStudentRouter)
 
 router.use(
