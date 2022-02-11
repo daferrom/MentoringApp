@@ -71,7 +71,13 @@ postUserRouter.post('/', async (req, res) => {
     actualAge: req.body.actualAge,
     interestsStudent: req.body.interestsStudent,
     assignedMentor: req.body.assignedMentor,
-    interestsMentor: req.body.interestsMentor
+    interestsMentor: req.body.interestsMentor,
+    studentAssignment: req.body.studentAssignment,
+    commitment: req.body.commitment,
+    achievementOrientation: req.body.achievementOrientation,
+    flexibility: req.body.flexibility,
+    assertiveCommunication: req.body.assertiveCommunication,
+    studentsGenderPrefer: req.body.studentsGenderPrefer
   }
   // const gender = (req.body.gender);
   // const actualAge = (req.body.actualAge)
@@ -80,7 +86,7 @@ postUserRouter.post('/', async (req, res) => {
   // console.log(name, email, password, contactNumber, role, cohorte)
 
   if (!name || !email || !password || !role || !contactNumber || !cohorte){
-    return res.status(400).json({ msg: 'Please fill in all fields.' })}
+    return res.status(400).json({ msg: 'Please fill in all fields.'})}
 
   if (!validateEmail(email))
       return res.status(400).json({ msg: 'Invalid emails.' })
@@ -106,6 +112,9 @@ postUserRouter.post('/', async (req, res) => {
     secondSurname: req.body.secondSurname,
     contacNumber: req.body.contacNumber,
     role: req.body.role,
+    state: req.body.state,
+    program: req.body.program,
+    cohorte: req.body.cohorte
   })
 
   // await User.create(req.body)
@@ -119,7 +128,13 @@ postUserRouter.post('/', async (req, res) => {
         actualAge: profile.actualAge,
         interestsStudent: profile.interestsStudent,
         assignedMentor: profile.assignedMentor,
-        interestsMentor: profile.interestsMentor
+        interestsMentor: profile.interestsMentor,
+        studentAssignment: profile.studentAssignment,
+        commitment: profile.commitment,
+        achievementOrientation: profile.achievementOrientation,
+        flexibility: profile.flexibility,
+        assertiveCommunication: profile.assertiveCommunication,
+        studentsGenderPrefer: profile.studentsGenderPrefer
       })
       res.json(dbProfile)
     })
@@ -239,7 +254,7 @@ getInfoStudent.get('/', async (req, res) => {
       }
     res.json(arrayInfoStudents)
   } catch (error) {
-    next(error)
+    console.log(error)
   }
 })
 
